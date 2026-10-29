@@ -1,1 +1,1 @@
-R script can be created and eidted. class is very interesting.
+R script can be created and eidted. class is very interesting. Can learn in a week.
