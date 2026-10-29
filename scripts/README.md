@@ -1,0 +1,1 @@
+R script can be created and eidted. class is very interesting.
