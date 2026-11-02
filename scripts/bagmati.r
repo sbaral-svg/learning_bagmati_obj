@@ -47,13 +47,34 @@ calculate_sd <- function(x) {
   (sum_squaring / (length(x) - 1)) ^ 0.5
 }
 
+calculate_sd(c(1,2,3,4,5,6))
 
 
 # Function 3: Calculate coefficient of variation as a percentage
-calculate_cv <- function(x) {
+measure_cv <- function(x) {
   cv_value <- calculate_sd(x) / calculate_mean(x) * 100
   return(cv_value)
 }
+
+
+calculate_cv(){
+  #DATA GUARD
+  # if only one data : cannot calculate CV : error
+  # if less than 0.: faul;ty data: error 
+  #if greater than 200 too big to be true : wraning
+# is unavailable data : errro (NA cha ki nai)
+ # if number with unit : error (20cm, 20m, 20ft, 20inch) or error namanne vaye teslai clean garnu pareyo,
+  #DATA CLEANING
+
+  # if negative cha ra data chai looks valid vane - lai + ma change garne huna sakcha 
+  # or aru cleaning k k sincha
+  # given data : s. robusta, Shorea robusta, Shorea robusta, Shorea robusta, Shorea robusta, Shorea
+  measure_cv();
+
+}
+
+calculate_cv(c(10,12,13,-20))
+
 
 dbh_mean <- calculate_mean(data$dbh_cm)
 dbh_sd <- calculate_sd(data$dbh_cm)
@@ -118,3 +139,6 @@ cv_percent <- cv_value * 100
 #Return CV in percentage
 Return cv_percent
 
+
+
+calculate_cv(20)
